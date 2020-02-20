@@ -1,7 +1,8 @@
 <template>
-  <div id="app">
+  <div id="home">
     <img v-test-directive alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view />
   </div>
 </template>
 
