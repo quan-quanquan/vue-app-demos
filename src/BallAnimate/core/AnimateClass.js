@@ -1,3 +1,5 @@
+import Tween from './tweenAlgorithm'
+
 export default class Animate {
   constructor (dom) {
     this.dom = dom // 进行运动的dom节点
@@ -15,7 +17,7 @@ export default class Animate {
     this.propertyName = propertyName
     this.endPos = endPos
     this.duration = duration
-    this.easing = easing
+    this.easing = Tween[easing]
 
     let timeId = setInterval(() => {
       if (this.step() === false) {
