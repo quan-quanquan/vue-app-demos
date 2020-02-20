@@ -16,13 +16,13 @@ let tween = {
     return c * (t/=d)*t*t*t*t + b
   },
   strongEaseOut (t, b, c, d) {
-    return c * ((t/=d - 1)*t*t*t*t + 1) + b
+    return c * ((t=t/d - 1)*t*t*t*t + 1) + b
   },
   sinEaseIn (t, b, c, d) {
     return c * (t/=d)*t*t + b
   },
   sinEaseOut (t, b, c, d) {
-    return c * ((t/=d - 1)*t*t + 1) + b
+    return c * ((t=t/d - 1)*t*t + 1) + b
   }
 }
 

@@ -18,7 +18,8 @@ export default {
   methods: {
     moving () {
       let animate = new BallAnimate(this.ball)
-      animate.start()
+      animate.start('left', 450, 5000, 'strongEaseOut')
+      console.log(this.ball.style.left)
     }
   }
 }
@@ -27,9 +28,9 @@ export default {
 .animate-container {
   width: 500px;
   height: 500px;
-  translate: (0, -250px);
+  transform: translateY(50%);
   margin: 0 auto;
-  margin-top: 50%;
+  margin-top: -250px;
   background-color: cadetblue;
 }
 #ball {
@@ -37,5 +38,6 @@ export default {
   height: 24px;
   border-radius: 50%;
   background-color: coral;
+  position: absolute;
 }
 </style>
