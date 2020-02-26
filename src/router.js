@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Home from './App'
 import BallAnimate from './BallAnimate'
+import Decorator from './Decorator'
 
 Vue.use(VueRouter)
 const routes = [
@@ -12,6 +13,10 @@ const routes = [
   },
   { path: '/ball-animate', 
     component: BallAnimate 
+  },
+  {
+    path: '/decorator',
+    component: Decorator
   }
 ]
 
