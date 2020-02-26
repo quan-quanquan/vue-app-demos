@@ -1,10 +1,14 @@
 function log(target, name, descriptor) {
-  console.log(target)
-  console.log(name)
-  console.log(descriptor)
+  var oldValue = descriptor.value;
+
+  descriptor.value = function() {
+    console.log(`Calling ${name} with`, arguments);
+    return oldValue.apply(this, arguments);
+  };
+  return descriptor;
 }
 
-export defalut Car {
+export default class Car {
   @log
   run() {
     console.log('car run')
